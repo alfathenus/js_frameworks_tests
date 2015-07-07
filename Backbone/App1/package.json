@@ -1,0 +1,11 @@
+{
+  "name": "app1",
+  "version": "0.0.1",
+  "description": "Basic backend for Backbone appe",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Andres Lozada Mosto <alfathenus@gmail.com>",
+  "license": "MIT"
+}

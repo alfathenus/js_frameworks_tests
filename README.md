@@ -1,4 +1,8 @@
-js_frameworks_tests
+Pruebas de frameworks js
 ===================
 
-Pruebas de frameworks js
+* EmberJS
+* BackboneJS
+* BackboneJS + MarionetteJS
+* AngularJS
+* SammyJS

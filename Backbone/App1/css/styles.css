@@ -1,0 +1,16 @@
+body, html {
+	background: #ecf0f1;
+}
+
+body {
+	margin-top: 20px;
+}
+
+div#formulario {
+	width: 20%;
+	background: #bdc3c7;
+}
+
+div#listado {
+	width: 80%;
+}
