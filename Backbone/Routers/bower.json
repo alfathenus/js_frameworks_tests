@@ -1,0 +1,29 @@
+{
+  "name": "js_frameworks_test_backbone_routers",
+  "version": "0.1.0",
+  "homepage": "https://github.com/alfathenus/js_frameworks_tests",
+  "authors": [
+    "Andres Lozada Mosto <alfathenus@gmail.com>"
+  ],
+  "description": "Test Backbone Router behaviours",
+  "main": "index.html",
+  "keywords": [
+    "js",
+    "backbone",
+    "router"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.3.0",
+    "backbone-tooltip": "~1.4.0"
+  }
+}

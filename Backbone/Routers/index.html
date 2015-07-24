@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prueba de los Routers de Backbone</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/backbone-tooltip/src/backbone-tooltip.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <nav class="main">
+            <img id="face" src="assets/face.png" data-bbtooltip="Fuck off! let me alone!" data-bbtooltip-timeout="1000" data-bbtooltip-align="right" data-bbtooltip-context="danger" />
+            <a href="#home"><i class="fa fa-home"></i><br>Home</a>
+            <a href="#search/hola"><i class="fa fa-search"></i>Search</a>
+            <a href="#about"><i class="fa fa-user"></i>About</a>
+        </nav>
+        <div class="contentWrapper">
+            <div class="innerWrapper">
+                <!-- content loaded here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script type="application/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script type="application/javascript" src="bower_components/underscore/underscore-min.js"></script>
+    <script type="application/javascript" src="bower_components/backbone/backbone-min.js"></script>
+    <script type="application/javascript" src="bower_components/backbone-tooltip/src/backbone-tooltip.js"></script>
+
+    <script type="application/javascript" src="js/ns.js"></script>
+    <script type="application/javascript" src="js/views/FaceView.js"></script>
+    <script type="application/javascript" src="js/commands/helpers/LoadHTMLPartCommand.js"></script>
+    <script type="application/javascript" src="js/commands/RouterAboutCommand.js"></script>
+    <script type="application/javascript" src="js/commands/RouterHomeCommand.js"></script>
+    <script type="application/javascript" src="js/commands/RouterSearchCommand.js"></script>
+    <script type="application/javascript" src="js/routers/AppRouters.js"></script>
+    <script type="application/javascript" src="js/App.js"></script>
+    <script type="application/javascript" src="js/main.js"></script>
+</body>
+
+</html>
