@@ -1,0 +1,48 @@
+/* header styles */
+
+.navbar.header {
+    background: #F9690E;
+    color: #ecf0f1;
+    height: 70px;
+    max-height: 70px;
+    border: none;
+}
+.navbar.header header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    margin-top: 14px;
+    margin-left: 12px;
+    font-size: 2em;
+}
+.navbar.header header span {
+    font-size: 0.85em;
+    font-style: italic;
+}
+/* content styles */
+
+.wrapper {
+    margin-top: 70px;
+    overflow: hidden!important;
+}
+.wrapper .sidebar {
+    background: #22313F;
+}
+/* form styles */
+
+.wrapper form {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 10px;
+}
+.wrapper form h3 {
+    margin-top: 0px;
+}
+/* notes tyles */
+
+.notes {
+    margin-top: 10px;
+}
+.note {
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 31%;
+    margin-left: 15px;
+}

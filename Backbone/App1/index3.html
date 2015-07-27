@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Backbone Demo: Models, collections and Views</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles3.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-default header">
+        <header>
+            Backbone Demo: <span>Models, Collections, Views and Templates</span>
+        </header>
+
+    </nav>
+    <div class="container-fluid wrapper">
+        <div class="row">
+            <div class="col-xs-3 sidebar">
+                <form id="formu" class="well">
+                    <h3>New note</h3>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Your note</label>
+                        <textarea id="desc" class="form-control" placeholder="Your note"></textarea>
+                    </div>
+                    <div class="form-group clearfix">
+                        <button id="addBtn" type="button" class="btn btn-primary pull-right">Add new note</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-9 aa">
+
+                <div class="row notes">
+                    <!--<div  class="note item well" style="height:100px;">
+                            uno1
+                    </div>
+                    <div class="note item well" style="height:200px;">
+                            dos
+                    </div>
+                    <div  class="note item well" style="height:100px;">
+                            tres
+                    </div>
+                    <div  class="note item well" style="height:300px;">
+                            cuatro
+                    </div>
+                    <div  class="note item well" style="height:100px;">
+                            cinco
+                    </div>
+                    <div  class="note item well" style="height:100px;">
+                            seis
+                    </div>
+                    <div  class="note item well" style="height:100px;">
+                            siete
+                    </div>
+                    <div class="note item well" style="height:400px;">
+                            ocho
+                    </div>
+                    <div  class="note item well" style="height:100px;">
+                        nueve
+                    </div>
+                    <div id="10" class="note item well" style="height:100px;">
+                        diez
+                    </div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+        footer
+    </footer>
+
+    <script type="text/template" id="note-item-tpl">
+			<div class="note item well">
+  			<p><strong><%= titulo %></strong></p>
+  			<p><%= desc %></p>
+			</div>
+		</script>
+
+    <script type="application/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <script type="application/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="libs/underscore/underscore-min.js"></script>
+    <script type="application/javascript" src="libs/backbone/backbone-min.js"></script>
+    <script type="application/javascript" src="libs//isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="application/javascript" src="libs/backbone.localstorage/backbone.localStorage-min.js"></script>
+
+    <script type="application/javascript" src="js/ns.js"></script>
+    <script type="application/javascript" src="js/models/NoteModel.js"></script>
+    <script type="application/javascript" src="js/collections/NoteCollection.js"></script>
+    <script type="application/javascript" src="js/views/AppView.js"></script>
+    <script type="application/javascript" src="js/App.js"></script>
+
+    <script type="application/javascript" src="js/main2.js"></script>
+
+</body>
+
+</html>

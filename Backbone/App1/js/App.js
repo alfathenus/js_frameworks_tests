@@ -1,20 +1,47 @@
 (function(global, ns, _, Backbone) {
+    var notes = "asdAS";
     var App = function() {
-        
-        this.notes = null;
-        this.EventAgregattor = null;
-        
+
+        this.notes = "hola";
+
         this.init = function() {
+            //self reference
+            var self = this;
+
             //coleccion de notas
-            this.notes = null;
+            this.notes = new ns.Collections.NoteCollection();
 
-            //EventAgregator patterns
-            this.EventAgregattor = _.extend({}, Backbone.Events);
+            this.notes.reset([{id:1, titulo:"Note 1", desc:"Desc Note 1"},
+                              {id:2, titulo:"Note 2", desc:"This is a long long text with a lot of word that you will think that I'm stupid... yeah, that is right!"}]);
 
-            //Handler de los eventos y bindeo a su command
-            this.EventAgregattor.on(ns.Events.NoteEvent.ADD, ns.Commands.AddNoteFromFrontForm);
-            //this.EventAgregattor.on("same_event1", ns.Commands.RenderNoteCollection);
+            console.log("lenght: " + this.notes.length);
+
+            /*
+            //broadcast collection changes
+            function broadcast() {
+                Backbone.Events.trigger(ns.Events.NoteEvent.LIST_CHANGE, new ns.Models.EventModel({
+                    type: ns.Events.NoteEvent.LIST_CHANGE,
+                    data: self.notes
+                }));
+            }
+
+            //Adds handlers for the events on EventBus/Event Aggregator.
+            Backbone.Events.on(ns.Events.NoteEvent.ADD, ns.Commands.AddNoteFromFrontForm);
+            this.notes.on({
+                "add": broadcast,
+                "remove": broadcast
+            });
+*/
+            //Add the AppView
+
+            this.appView = new ns.Views.AppView();
         }
+
+       /* this.Add = function(data) {
+            if (data) {
+                this.notes.add(data);
+            }
+        }*/
     }
 
     global.App = new App();
