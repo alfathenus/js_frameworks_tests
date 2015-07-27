@@ -1,12 +1,24 @@
-(function(ns, App, Backbone) {
+(function(ns, App, Backbone, $) {
     ns.Commands.AddNoteFromFrontForm = function(event) {
-        var target = event.get("target");
 
-        App.notes.add({
-            titulo: target.$('#titulo').val(),
-            desc: target.$('#descripcion').val()
+        var target = event.get("target") || new {
+            $: $
+        };
+
+        var newModel = App.Add({
+            title: target.$('#title').val(),
+            desc: target.$('#desc').val()
         });
 
-        console.log(App.notes.toJSON());
+        if (newModel) {
+            ns.EventBus.trigger({
+                target: target,
+                data: newModel,
+                type: ns.Events.NoteEvent.LIST_CHANGE
+            });
+        }
+        else {
+            // manage error!
+        }
     }
-})(this.ns, this.App, Backbone);
+})(this.ns, this.App, Backbone, jQuery);

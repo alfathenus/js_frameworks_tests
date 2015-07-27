@@ -3,8 +3,8 @@
 
 <head>
     <title>Backbone Demo: Models, collections and Views</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles3.css">
 </head>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-xs-9 aa">
 
-                <div class="row notes">
+                <div class="row notes clearfix">
                     <!--<div  class="note item well" style="height:100px;">
                             uno1
                     </div>
@@ -79,7 +79,7 @@
 
     <script type="text/template" id="note-item-tpl">
 			<div class="note item well">
-  			<p><strong><%= titulo %></strong></p>
+  			<p><strong><%= title %></strong></p>
   			<p><%= desc %></p>
 			</div>
 		</script>
@@ -92,11 +92,20 @@
     <script type="application/javascript" src="libs/backbone.localstorage/backbone.localStorage-min.js"></script>
 
     <script type="application/javascript" src="js/ns.js"></script>
+    <script type="application/javascript" src="js/events/NoteEvent.js"></script>
     <script type="application/javascript" src="js/models/NoteModel.js"></script>
+    <script type="application/javascript" src="js/models/EventModel.js"></script>
     <script type="application/javascript" src="js/collections/NoteCollection.js"></script>
+    <script type="application/javascript" src="js/eventbus/EventBus.js"></script>
+    <script type="application/javascript" src="js/views/NotesListView.js"></script>
     <script type="application/javascript" src="js/views/AppView.js"></script>
     <script type="application/javascript" src="js/App.js"></script>
-
+    <script type="application/javascript" src="js/commands/AddNoteFromFrontForm.js"></script>
+    <script type="application/javascript" src="js/commands/UpdateNotesLayout.js"></script>
+    <script type="application/javascript" src="js/commands/UpdateNotesListCommand.js"></script>
+    <script type="application/javascript" src="js/commands/WindowResizeCommand.js"></script>
+    <script type="application/javascript" src="js/commands/CreateNotesLayout.js"></script>
+    <script type="application/javascript" src="js/commands/ClearFormCommand.js"></script>
     <script type="application/javascript" src="js/main2.js"></script>
 
 </body>

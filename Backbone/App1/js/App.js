@@ -1,5 +1,29 @@
-(function(global, ns, _, Backbone) {
+(function(win, global, ns, _, Backbone) {
     var notes = "asdAS";
+
+    function initNotesCollection() {
+        this.notes = new ns.Collections.NoteCollection();
+
+        this.notes.reset([{
+            id: 1,
+            title: "Note 1",
+            desc: "Desc Note 1"
+        }, {
+            id: 2,
+            title: "Note 2",
+            desc: "This is a long long text with a lot of word that you will think that I'm stupid... yeah, that is right!"
+        }]);
+    }
+
+    function initCommands() {
+        ns.EventBus.on(ns.Events.NoteEvent.ADD, ns.Commands.AddNoteFromFrontForm);
+        ns.EventBus.on(ns.Events.NoteEvent.WINDOW_RESIZE, ns.Commands.WindowResizeCommand);
+        ns.EventBus.on(ns.Events.NoteEvent.UPDATE_LAYOUT, ns.Commands.UpdateNotesLayout);
+        ns.EventBus.on(ns.Events.NoteEvent.UPDATE_NOTES_VIEW, ns.Commands.UpdateNotesListCommand);
+        ns.EventBus.on(ns.Events.NoteEvent.CREATE_LAYOUT, ns.Commands.CreateNotesLayout);
+        ns.EventBus.on(ns.Events.NoteEvent.CLEAR_FORM, ns.Commands.ClearFormCommand);
+    }
+
     var App = function() {
 
         this.notes = "hola";
@@ -8,41 +32,38 @@
             //self reference
             var self = this;
 
-            //coleccion de notas
-            this.notes = new ns.Collections.NoteCollection();
-
-            this.notes.reset([{id:1, titulo:"Note 1", desc:"Desc Note 1"},
-                              {id:2, titulo:"Note 2", desc:"This is a long long text with a lot of word that you will think that I'm stupid... yeah, that is right!"}]);
-
+            // initialize collection with default notes
+            initNotesCollection.call(this);
             console.log("lenght: " + this.notes.length);
 
-            /*
-            //broadcast collection changes
-            function broadcast() {
-                Backbone.Events.trigger(ns.Events.NoteEvent.LIST_CHANGE, new ns.Models.EventModel({
-                    type: ns.Events.NoteEvent.LIST_CHANGE,
-                    data: self.notes
-                }));
-            }
+            // initialize commands
+            initCommands.call(this);
 
-            //Adds handlers for the events on EventBus/Event Aggregator.
-            Backbone.Events.on(ns.Events.NoteEvent.ADD, ns.Commands.AddNoteFromFrontForm);
-            this.notes.on({
-                "add": broadcast,
-                "remove": broadcast
-            });
-*/
-            //Add the AppView
-
+            // initialize the app view
             this.appView = new ns.Views.AppView();
+
+            // catch the resize window event
+            $(win).resize(function() {
+                ns.EventBus.trigger({
+                    type: ns.Events.NoteEvent.WINDOW_RESIZE
+                });
+            });
+
+            // load the defauls modeles to the view
+            ns.EventBus.trigger({
+                type: ns.Events.NoteEvent.LIST_CHANGE,
+                data: this.notes.models
+            });
         }
 
-       /* this.Add = function(data) {
+        this.Add = function(data) {
+            var ret = null;
             if (data) {
-                this.notes.add(data);
+                ret = this.notes.create(data);
             }
-        }*/
+            return ret;
+        }
     }
 
     global.App = new App();
-})(this, this.ns, _, Backbone);
+})(window, this, this.ns, _, Backbone);

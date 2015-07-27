@@ -1,14 +1,20 @@
-(function(ns, Backbone){
-    ns.Views.AppView = Backbone.View.extend({
-      events: {
-        "click #addBtn": "addNote"
-      },
-        initialize: function(){
-            //this.formView = new ns.Views.FormView();
-            //this.notesListView = new ns.Views.NotesListView();
-        },
-        addNote:function(){
-          console.log("hola");
-        }
-    });
+(function(ns, Backbone) {
+  ns.Views.AppView = Backbone.View.extend({
+    el: '.wrapper',
+
+    events: {
+      "click #addBtn": "addNote"
+    },
+    
+    initialize: function(){
+      this.noteListView = new ns.Views.NotesListView();
+    },
+
+    addNote: function() {
+      ns.EventBus.trigger({
+        target: this,
+        type: ns.Events.NoteEvent.ADD
+      })
+    }
+  });
 })(this.ns, Backbone);
