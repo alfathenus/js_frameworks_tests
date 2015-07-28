@@ -4,7 +4,7 @@
         firstTime: true,
 
         initialize: function() {
-            ns.EventBus.on(ns.Events.NoteEvent.LIST_CHANGE, _.bind(this.updateNoteListView, this))
+            ns.EventBus.on(ns.Events.NoteEvent.LIST_CHANGE, _.bind(this.updateNoteListView, this));
             this.tpl = _.template($('#note-item-tpl').html());
         },
 

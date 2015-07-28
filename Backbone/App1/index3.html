@@ -7,6 +7,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles3.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css">
 </head>
 
 
@@ -38,7 +39,23 @@
             <div class="col-xs-9 aa">
 
                 <div class="row notes clearfix">
-                    <!--<div  class="note item well" style="height:100px;">
+                    <div class="note item well">
+                        <i class="fa fa-times deleteNote pull-right"></i>
+                        <i class="fa fa-pencil-square-o editNote pull-right"></i>
+                        <p class="first"><strong>Titulo</strong></p>
+                        <p>
+                            Descripcion
+                        </p>
+
+                    </div>
+                    <div class="note item well edit">
+                        <i class="fa fa-times deleteNote pull-right"></i>
+                        <i class="fa fa-pencil-square-o editNote pull-right"></i>
+                        <i class="fa fa-floppy-o save pull-right"></i>
+                        <input type="text" name="" value="Titulo" />
+                        <textarea>Descripcion</textarea>
+                    </div>
+                    <!-- <div  class="note item well" style="height:100px;">
                             uno1
                     </div>
                     <div class="note item well" style="height:200px;">
@@ -78,11 +95,15 @@
     </footer>
 
     <script type="text/template" id="note-item-tpl">
-			<div class="note item well">
-  			<p><strong><%= title %></strong></p>
-  			<p><%= desc %></p>
-			</div>
-		</script>
+        <div class="note item well">
+            <i class="fa fa-times deleteNote pull-right"></i>
+            <i class="fa fa-pencil-square-o editNote pull-right"></i>
+            <p class="first"><strong><%= title %></strong></p>
+            <p>
+                <%= desc %>
+            </p>
+        </div>
+    </script>
 
     <script type="application/javascript" src="libs/jquery/dist/jquery.min.js"></script>
     <script type="application/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>

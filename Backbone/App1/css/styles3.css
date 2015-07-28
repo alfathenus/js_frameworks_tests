@@ -7,6 +7,7 @@
     max-height: 70px;
     border: none;
 }
+
 .navbar.header header {
     font-family: 'Open Sans Condensed', sans-serif;
     /*font-family: 'Open Sans', sans-serif;*/
@@ -14,42 +15,100 @@
     margin-left: 12px;
     font-size: 2em;
 }
+
 .navbar.header header span {
     font-size: 0.85em;
     font-style: italic;
 }
+
+
 /* content styles */
 
 .wrapper {
     margin-top: 70px;
     overflow: hidden!important;
 }
+
 .wrapper .sidebar {
     background: #22313F;
 }
+
+
 /* form styles */
 
 .wrapper form {
     font-family: 'Open Sans Condensed', sans-serif;
     margin-top: 10px;
 }
+
 .wrapper form h3 {
     margin-top: 0px;
 }
+
+
 /* notes tyles */
 
 .notes {
     margin-top: 10px;
 }
+
+
+.aa {
+    overflow: hidden;
+}
+
 .note {
     font-family: 'Open Sans Condensed', sans-serif;
     width: 31%;
     margin-left: 15px;
-}
-.aa {
-    overflow:hidden;
+    border-color: #CCC;
+    min-height:120px;
+    padding-top:5px;
 }
 
+.note .deleteNote,
+.note .editNote,
+.note .save{
+    color: #CCC;
+    margin-right:-12px;
+}
+
+.note .save{
+    color: #1ca589;
+}
+
+.note .editNote,
+.note .save{
+    margin-right:0px;
+}
+
+.note .deleteNote:hover,
+.note .editNote:hover,
+.note .save:hover {
+    cursor: pointer;
+    color: #AAA;
+}
+
+.note .save:hover{
+    color: #106352;
+}
+
+
+.note input {
+    width:100%;
+    margin-top:2px;
+}
+.note textarea {
+    width:100%;
+    height:100%;
+}
+
+.note .first {
+    margin-top: 20px;
+}
+
+/* Footer styles */
+
 footer {
-    margin-bottom:0px!important;
+    margin-bottom: 0px!important;
 }
