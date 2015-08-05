@@ -1,3 +1,7 @@
+body {
+    background: #22313F;
+}
+
 /* header styles */
 
 .navbar.header {
@@ -9,8 +13,8 @@
 }
 
 .navbar.header header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     margin-top: 14px;
     margin-left: 12px;
     font-size: 2em;
@@ -27,18 +31,34 @@
 .wrapper {
     margin-top: 70px;
     overflow: hidden!important;
+    background: #22313F;
 }
 
 .wrapper .sidebar {
     background: #22313F;
+    border-right: 1px solid #222;
+    margin-left:0px!important;
+    margin-right:0px!important;
+    padding-left:0px!important;
+    padding-right:0px!important;
 }
 
 
 /* form styles */
 
 .wrapper form {
-    font-family: 'Open Sans Condensed', sans-serif;
+   font-family: 'Open Sans', sans-serif;
     margin-top: 10px;
+    /*background: #bdc3c7;*/
+    margin-bottom:10px;
+    border-bottom: 1px solid #222;
+    color: #ecf0f1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wrapper form .form-control{
+    border-radius: 0px;
 }
 
 .wrapper form h3 {
@@ -58,19 +78,26 @@
 }
 
 .note {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 31%;
     margin-left: 15px;
     border-color: #CCC;
-    min-height:120px;
-    padding-top:5px;
+    padding-top:0px;
+    margin-bottom: 15px;
 }
 
 .note .deleteNote,
 .note .editNote,
 .note .save{
     color: #CCC;
-    margin-right:-12px;
+    padding-top:5px;
+}
+
+.note .well {
+    width: 100%;
+    padding:2px 0px 0px 0px;
+    margin-bottom:0px;
+    border-radius: 0px;
 }
 
 .note .save{
@@ -95,20 +122,27 @@
 
 
 .note input {
-    width:100%;
+    width:85%;
     margin-top:2px;
+    font-weight: bold;
 }
 .note textarea {
     width:100%;
-    height:100%;
 }
 
 .note .first {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 /* Footer styles */
 
 footer {
     margin-bottom: 0px!important;
+    background: #222!important;
+    border-color: #222!important;
+}
+
+.face {
+    width:100%;
+    padding:0px 10px 10px 10px;
 }

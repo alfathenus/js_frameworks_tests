@@ -5,7 +5,7 @@
             $: $
         };
 
-        var newModel = App.Add({
+        var newModel = App.add({
             title: target.$('#title').val(),
             desc: target.$('#desc').val()
         });
