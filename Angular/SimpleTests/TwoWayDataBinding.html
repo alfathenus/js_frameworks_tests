@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dataBindingApp">
+<head>
+    <title>Simple Expresion Test</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+    <form ng-controller="DataBindController as bind">
+        <header><h1>How many cars we have?</h1></header>
+        <label for="value">Write the correct number: </label>
+        <input type="number" id="value" ng-model="value" >
+        <br>
+        or
+        <br>
+        <label>remove or add one clicking these buttons </label>
+        <button id="remBtn" ng-click="rem()">-</button> 
+        <button id="addBtn" ng-click="add()">+</button> 
+        <br>
+        <br>
+        <label>We have {{value}} cars</label>
+    </form>
+
+    <script>
+        (function(){
+            angular.module("dataBindingApp", [])
+                .controller("DataBindController", ["$scope", function($scope){
+                    $scope.value = 2;
+                    $scope.add = function(){
+                        this.value++;
+                    };
+                    $scope.rem = function(){
+                        if(this.value > 0) this.value--;
+                    }
+                }]);
+        })();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appTest">
+<head>
+    <title>Simple Expresion Test</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+    <h1>
+        {{"Simple Expresiones"}}
+    </h1>
+    <article ng-controller="postController as post">
+        <header><h2>{{post.post.title}}</h2></header>
+        <p>{{post.post.post}}</p>
+    </article>
+
+    
+    <script>
+        (function(){
+            var appTest = angular.module("appTest", []);
+            
+            appTest.controller("postController", function() {
+                this.post = post;
+            });
+            
+            var post = {
+                title: "New on angular",
+                post: "bla bla bla"
+            }
+        })();
+        
+    </script>
+</body>
+</html>

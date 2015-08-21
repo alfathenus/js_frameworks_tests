@@ -1,0 +1,18 @@
+{
+  "name": "AngularSimpleTest",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alfathenus/js_frameworks_tests",
+  "authors": [
+    "Andres <andres.lozadamosto@gmail.com>"
+  ],
+  "description": "Very minimal tests for each Angular Behaviour",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
