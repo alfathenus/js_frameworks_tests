@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <form>
+        <label for="titulo">Titulo: </label>
+        <input type="text" id="titulo" name="titulo" />
+        <br>
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" />
+        <br>
+        <label for="Ciudad">Ciudad: </label>
+        <input type="text" id="ciudad" name="ciudad" />
+        <br>
+        <button type="button" id="btnSubmit">Enviar</button>
+    </form>
+
+
+    <script>
+        (function() {
+            var myFirebaseRef = null;
+
+            function onSubmitHandler() {
+                myFirebaseRef.set({
+                    title: $("#titulo").val(),
+                    author: $("#autor").val(),
+                    location: {
+                        city: $("#ciudad").val()
+                    }
+                });
+            }
+
+            $(function() {
+                myFirebaseRef = new Firebase("blistering-fire-5016.firebaseapp.com/Nombre");
+
+                $("#btnSubmit").on("click", onSubmitHandler);
+            });
+        })();
+    </script>
+</body>
+
+</html>

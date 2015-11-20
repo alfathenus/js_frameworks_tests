@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        $(function() {
+            var myFirebaseRef = new Firebase("blistering-fire-5016.firebaseio.com/Nombre");
+
+            myFirebaseRef.child("location/city").on("value", function(snapshot) {
+                console.log(snapshot.val()); 
+            });
+
+        });
+    </script>
+</body>
+
+</html>

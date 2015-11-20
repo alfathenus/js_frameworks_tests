@@ -1,0 +1,22 @@
+{
+  "name": "FirebaseExample",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alfathenus/js_frameworks_tests",
+  "authors": [
+    "Andres <alfathenus@gmail.com>"
+  ],
+  "description": "Ejemplo de uso de Firebase",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.9",
+    "jquery": "~2.1.4"
+  }
+}
