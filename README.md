@@ -5,7 +5,7 @@ Este espacio en github es un proyecto personal para ir probando frameworks y lib
 
 
 ##Pruebas
-A este momento
+A este momento: :white_check_mark:
 - AngularJS 
     - Expresiones basicas, controllers
     - Twoway databinding
@@ -17,7 +17,7 @@ A este momento
 - React
     - Configuracion React + Webpack + Es6 con mínimo componente de React
 
-Roadmap
+Roadmap :+1: :fire:
 - React: incrementar ejemplos, Flux, Router, isomorphic app, etc
 - Angular: mas ejemplos de directivas, etc
 - Angular2
@@ -38,7 +38,6 @@ Roadmap
     - Nuevos API
     - Service workers
     - workers
-    - 
 - End to end testing with karma and phantom
 - Optimizacion
     - Módulos (AMD, ES6, CommonJS)
@@ -46,3 +45,7 @@ Roadmap
     - Minified, bundling, etc
 - Deployment
     - Grunt, Gulp, Webpack
+
+
+##Participar
+Me queres ayudar? Simplemente hace un fork y manda un Pull Request. Cualquier aporte es mas que bienvenido ya que la idea de esto es que aprendamos todos.
