@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import data from './../../data/data.json';
+import DataServiceSync from './../services/saludoService';
 
+console.log(DataServiceSync);
 class Saludo extends Component{
   render() {
     return (
       <div>
-        {data.nombre}
+        {DataServiceSync.data.nombre}
       </div>
     );
   }
