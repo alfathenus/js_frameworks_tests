@@ -1,16 +1,16 @@
 ![React + Webpack + ES6](https://raw.githubusercontent.com/alfathenus/js_frameworks_tests/master/React/react-webpack-es6.png "React + Webpack + ES6")
 
-==Objetivo
+==Objetivo==
 Esta página de Github intenta ayudar a setear por primera vez un ambiente de trabajo con ReactJS, Webpack y ES6 con Babel.
 
-==Configuración y uso
+==Configuración y uso==
 
-===Clonar y usar
+===Clonar y usar===
 Si se quiere clonar el repositorio y utilizarlo directamente es necesario los siguiente:
 ====Instalar NodeJS
 Se necesita tener instalado [NodeJS](https://nodejs.org) Preferible el LTS.
 
-====Instalar Webpack
+====Instalar Webpack====
 Instalamos webpack en el sistema
 ```
 npm install -g webpack
@@ -24,17 +24,17 @@ npm install
 ```
 y compilamos con `npm run buld` o `webpack`directamente  y vemos que en la carpeta public estan los archivos compilados.
 
-===Desde cero
+===Desde cero===
 Si no quieren bajarse el proyecto, estos son los pasos a seguir para crear la configuración necesaria:
 
-====Archivo package.json
+====Archivo package.json====
 Crear el archivo `package.json` por medio del comando:
 ```
 npm init
 ```
 y seguir las instrucciones.
 
-====Instalar React
+====Instalar React====
 ```
 npm install --save react react-dom
 ```
@@ -45,13 +45,13 @@ Babel
 npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
 ```
 
-====Otras dependencias
+====Otras dependencias====
 En este proyecto usamos un json loader para cargar archivos json y el html-webpack-plugin para el template html de la app
 ```
 npm install --save-dev html-webpack-plugin json-loader
 ```
 
-====Crear archivo webpack.config.js
+====Crear archivo webpack.config.js====
 El archivo `webpack.config.js`es el archivo de configuración de webpack el cual especifica la configuración del proyecto
 ```javascript
 // incluimos webpack
