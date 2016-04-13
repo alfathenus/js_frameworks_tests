@@ -33,4 +33,16 @@ Roadmap
 - IOnic
 - VUE.js
 - Ember
-- etc
+- HTML 5 new apis
+- ES6
+    - Nuevos API
+    - Service workers
+    - workers
+    - 
+- End to end testing with karma and phantom
+- Optimizacion
+    - Módulos (AMD, ES6, CommonJS)
+    - Rendering page cycle
+    - Minified, bundling, etc
+- Deployment
+    - Grunt, Gulp, Webpack
