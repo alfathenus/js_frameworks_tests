@@ -25,7 +25,7 @@ npm install
 y compilamos con `npm run buld` o `webpack`directamente  y vemos que en la carpeta public estan los archivos compilados.
 
 ###Desde cero
-Si no quieren bajarse el proyecto, estos son los pasos a seguir para crear la configuración necesaria:
+Si no quieren bajarse el proyecto, estos son los pasos a seguir para crear la configuración necesaria (además de los dos pasos del punto anterior):
 
 ####Archivo package.json
 Crear el archivo `package.json` por medio del comando:
