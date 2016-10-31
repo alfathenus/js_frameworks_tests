@@ -1,14 +1,18 @@
 import React, {Component} from 'react'
 import DataServiceSync from './../services/saludoService';
+import SaludoCompView from './SaludoCompView';
 
-console.log(DataServiceSync);
+
 class Saludo extends Component{
   render() {
-    return (
+    /*return (
       <div>
         {DataServiceSync.data.nombre}
       </div>
-    );
+    );*/
+    
+    return SaludoCompView.bind(this)(DataServiceSync);
+    
   }
 }
 

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script>
+        (
+            
+            function() {
+            
+            /* global Firebase */
+            var myDataRef = new Firebase('https://popping-heat-3458.firebaseio.com/datos/');
+
+            var user = "alfathenus@gmail.com";
+            //var user = "andres.lozadamosto@gmail.com";
+            var pass = "password"
+            
+            
+            function login() {
+                return myDataRef.authWithPassword({
+                    email: user,
+                    password: pass
+                }, function(error, authData) {}, {
+                    remember: "none"
+                });
+            };
+            
+            var l = login();
+            l
+                .then((authData)=>{
+                    console.log(authData.val());
+                })
+                .catch((error)=>{
+                    console.log(error.val());
+                });
+
+            /*myDataRef.authWithPassword({
+                    email: user,
+                    password: pass
+                },
+                function(error, authData) {
+                    if (!error) {
+                        init();
+                    }
+                    else {
+                        console.log("Usuario inixistente, vamos a crearlo :)");
+                        signUp();
+                    }
+                }, {
+                    remember: "none"
+                });*/
+
+            /*var signUp = () => {
+                myDataRef.createUser({
+                    email: user,
+                    password: pass
+                }, (error, userData) => {
+                    if (error) {
+                        console.log("Error creating user:", error);
+                    }
+                    else {
+                        console.log("Successfully created user account with uid:", userData.uid);
+                        init();
+                    }
+                });
+            };
+
+            function init() {
+                myDataRef.on("value", function(snapshot) {
+                    console.log(snapshot.val());
+                }, function(errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+                /*myDataRef.on('child_added', (snapshot) => {
+                    console.log("Firebase child_added event");
+                    console.log(snapshot.val());
+                });*/
+
+
+                /*myDataRef.set('User Andres says hol2a');
+                myDataRef.push({name: "Andres", text: "Hola"});
+                myDataRef.push({name: "Moni", text: "Hola"});*/
+
+                /*myDataRef.set({
+                    title2: "Hello World!",
+                    author2: "Firebase4",
+                    location2: {
+                        city: "San Francisco2",
+                        state: "California2",
+                        zip: 94103
+                    }
+                });*/
+            //}
+            //init();
+
+        }());
+    </script>
+</body>
+
+</html>

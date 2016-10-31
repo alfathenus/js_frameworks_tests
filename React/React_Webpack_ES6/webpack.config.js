@@ -32,7 +32,7 @@ var config = {
     }, 
     // configuramos babel para el ES6
     {
-      test: /\.js$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel',
       query: {

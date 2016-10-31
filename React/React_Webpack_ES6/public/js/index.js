@@ -19685,6 +19685,10 @@
 	
 	var _saludoService2 = _interopRequireDefault(_saludoService);
 	
+	var _SaludoCompView = __webpack_require__(162);
+	
+	var _SaludoCompView2 = _interopRequireDefault(_SaludoCompView);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19692,8 +19696,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	console.log(_saludoService2.default);
 	
 	var Saludo = function (_Component) {
 	  _inherits(Saludo, _Component);
@@ -19707,11 +19709,13 @@
 	  _createClass(Saludo, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _saludoService2.default.data.nombre
-	      );
+	      /*return (
+	        <div>
+	          {DataServiceSync.data.nombre}
+	        </div>
+	      );*/
+	
+	      return _SaludoCompView2.default.bind(this)(_saludoService2.default);
 	    }
 	  }]);
 	
@@ -19742,6 +19746,33 @@
 	module.exports = {
 		"nombre": "Andres"
 	};
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SaludoCompView = function SaludoCompView(model) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        model.data.nombre
+	    );
+	}; /* global DataServiceSync */
+	
+	
+	exports.default = SaludoCompView;
 
 /***/ }
 /******/ ]);
